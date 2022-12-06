@@ -3,7 +3,7 @@
   tasks:
     - name: Include vars from vault
       ansible.builtin.include_vars:
-        file: creds.yaml
+        file: creds.yml
 
     - name: Mock message
       ansible.builtin.debug:
