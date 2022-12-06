@@ -1,6 +1,10 @@
 - name: Noop playbook
   hosts: all
   tasks:
+    - name: Include vars from vault
+      ansible.builtin.include_vars:
+        file: creds.yaml
+
     - name: Mock message
       ansible.builtin.debug:
         msg: "{{ mock_message | default('mock') }}"
