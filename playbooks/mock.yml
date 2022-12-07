@@ -4,4 +4,4 @@
   tasks:
     - name: Mock message
       ansible.builtin.debug:
-        msg: "{{ mock_message | default('mock') }}"
+        msg: "{{ prefix | default('DEBUG') }}: {{ mock_message | default('mock') }}"
