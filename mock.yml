@@ -2,6 +2,10 @@
   hosts: all
   gather_facts: false
   tasks:
+    - name: Crunch crunch
+      ansible.builtin.pause:
+        seconds: "{{ 15 | random(start=5, step=1) | int }}"
+
     - name: Mock message
       ansible.builtin.debug:
         msg: "{{ prefix | default('DEBUG') }}: {{ mock_message | default('mock') }}"
