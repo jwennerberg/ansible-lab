@@ -8,4 +8,5 @@
 
     - name: set artifact
       ansible.builtin.set_stats:
-        smoketest_result: 42
+        data:
+          smoketest_result: 42
