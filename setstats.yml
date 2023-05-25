@@ -1,0 +1,11 @@
+- name: set artifacts
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Mock message
+      ansible.builtin.debug:
+        msg: "{{ prefix | default('DEBUG') }}: {{ mock_message | default('mock') }}"
+
+    - name: set artifact
+      ansible.builtin.set_stats:
+        smoketest_result: 42
