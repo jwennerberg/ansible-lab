@@ -1,0 +1,29 @@
+---
+- name: Azure Hybrid Cloud Connectivity
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    vm_config:
+      vm_size: Standard_DS2_v2
+      name: ansibull01
+      network_interfaces:
+        - name: data-lake01
+
+  tasks:
+    # - name: Create VM using vm_config var
+
+
+- name: Configure cloud instance
+  hosts: rhel
+  become: true
+
+  tasks:
+    # - name: Wait 30 seconds for port 22 to become available on ansible_host
+    
+    # - name: Install libreswan package
+    
+    # - name: Copy a ./ipsec_files directory to /etc/ipsec.d/
+    
+    # - name: Start and enable ipsec service
